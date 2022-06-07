@@ -26,20 +26,31 @@ input.addEventListener('input', () => {
   }
 });
 
-/* const span = document.getElementById('counter');
-const textArea = document.getElementById('textarea');
-const maxChars = 500;
-
-const count = () => {
-    const enterChars = textArea.value.length;
-    const counter = maxChars - enterChars;
-    span.textContent = counter;
-}; */
-
-textarea.addEventListener('input', function() {
+const textarea = document.getElementById('textarea');
+textarea.addEventListener('input', () => {
   const span = document.getElementById('counter');
   const textArea = document.querySelector('#textarea');
 
   const counter = textArea.value.length;
   span.innerHTML = 500 - counter;
-})
+});
+
+/* const nome = document.getElementById('input-name');
+const sobrenome = document.getElementById('input-lastname');
+const email = document.getElementById('input-email');
+const casa = document.getElementById('house');
+const familia = document.getElementById('label-family');
+const materias = document.getElementById('label-content');
+const avaliacao = document.getElementById('label-rate');
+const buttonSubmit = document.getElementById('submit-btn');
+const form = document.getElementById('form-data');
+
+const test = [nome, sobrenome, email, casa, familia, materias, avaliacao];
+ */
+/* buttonSubmit.addEventListener('click', () => {
+  for (let index = 0; index < test.length; index += 1) {
+    const criar = document.createElement('p');
+    const aleatoria = test[index];
+    form.appendChild(criar);
+  }
+}); */
