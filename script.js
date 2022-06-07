@@ -25,3 +25,21 @@ input.addEventListener('input', () => {
     button.disabled = true;
   }
 });
+
+/* const span = document.getElementById('counter');
+const textArea = document.getElementById('textarea');
+const maxChars = 500;
+
+const count = () => {
+    const enterChars = textArea.value.length;
+    const counter = maxChars - enterChars;
+    span.textContent = counter;
+}; */
+
+textarea.addEventListener('input', function() {
+  const span = document.getElementById('counter');
+  const textArea = document.querySelector('#textarea');
+
+  const counter = textArea.value.length;
+  span.innerHTML = 500 - counter;
+})
