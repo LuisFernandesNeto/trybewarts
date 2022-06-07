@@ -13,16 +13,15 @@ function enterButton() {
 
 enterButton();
 
-const button = document.getElementById("submit-btn");
+const button = document.getElementById('submit-btn');
 button.disabled = true;
-const input = document.getElementById("agreement");
+const input = document.getElementById('agreement');
 
-input.addEventListener("input", function(event) {
-    const value = input.value;
-    if (value !== null && value !== "") {
-        button.disabled = false;
-    } else {
-        button.disabled = true;
-    }
+input.addEventListener('input', () => {
+  const { value } = input;
+  if (value !== null && value !== '') {
+    button.disabled = false;
+  } else {
+    button.disabled = true;
+  }
 });
-
