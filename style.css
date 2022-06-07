@@ -23,6 +23,11 @@ main {
 }
 
 #div {
-    flex-wrap: wrap;
-    align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#div2 {
+  flex-wrap: wrap;
+  align-items: center;
 }
