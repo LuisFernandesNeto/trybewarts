@@ -35,22 +35,25 @@ textarea.addEventListener('input', () => {
   span.innerHTML = 500 - counter;
 });
 
-/* const nome = document.getElementById('input-name');
-const sobrenome = document.getElementById('input-lastname');
-const email = document.getElementById('input-email');
-const casa = document.getElementById('house');
-const familia = document.getElementById('label-family');
-const materias = document.getElementById('label-content');
-const avaliacao = document.getElementById('label-rate');
-const buttonSubmit = document.getElementById('submit-btn');
-const form = document.getElementById('form-data');
+function relatory() {
+  const nome = document.getElementById('input-name').value;
+  const sobrenome = document.getElementById('input-lastname').value;
+  const email = document.getElementById('input-email').value;
+  const casa = document.getElementById('house').value;
+  const familia = document.querySelector('input[name="family"]:checked').value;
+  const materias = document.querySelector('input[name="content"]:checked').value;
+  const avaliacao = document.querySelector('input[name="rate"]:checked').value;
+  const form = document.getElementById('form-data').value;
 
-const test = [nome, sobrenome, email, casa, familia, materias, avaliacao];
- */
-/* buttonSubmit.addEventListener('click', () => {
-  for (let index = 0; index < test.length; index += 1) {
-    const criar = document.createElement('p');
-    const aleatoria = test[index];
-    form.appendChild(criar);
-  }
-}); */
+  document.getElementById('form-data').innerHTML = `
+    <p>Nome: ${nome} ${sobrenome}</p>
+    <p>Email: ${email}</p>
+    <p>Casa: ${casa}</p>
+    <p>Família: ${familia}</p>
+    <p>Matérias: ${materias}</p>
+    <p>Avaliação: ${avaliacao}</p>
+    <p>Observações: ${form}</p>
+  `;
+}
+const buttonSub = document.getElementById('submit-btn');
+buttonSub.addEventListener('click', relatory);
